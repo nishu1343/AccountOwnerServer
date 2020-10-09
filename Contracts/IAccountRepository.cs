@@ -5,7 +5,8 @@ using Entities.Models;
 
 namespace Contracts
 {
-    public interface IAccountRepository : IRepositoryBase<Account>
+    public interface IAccountRepository 
     {
+        IEnumerable<Account> AccountsByOwner(Guid ownerId);
     }
 }
